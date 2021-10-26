@@ -10,7 +10,8 @@ export default class DoctorsList extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:4000/v1/doctors")
+    // fetch("http://localhost:4000/v1/doctors")
+    fetch(`https://salty-fortress-39510.herokuapp.com/v1/doctors`) // doctor exercise node
       .then((response) => response.json())
       .then((result) => this.setState({ doctors: result }));
   }
