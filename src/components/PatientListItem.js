@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const PatientListItem = ({ patient }) => {
   const [doctorsList, setDoctorsList] = useState(null);
 
-  const GQL_API = `https:obscure-refuge-06548.herokuapp.com/`; // `http://localhost:3030/`;
+  const GQL_API = `https:obscure-refuge-06548.herokuapp.com/`; // `http://localhost:3030/`; // graphql api
   const GQL_QUERY = `
     query($id: ID!){
       patient(id: $id){

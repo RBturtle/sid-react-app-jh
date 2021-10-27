@@ -6,7 +6,7 @@ const PatientsList = () => {
 
   const fetchPatients = () => {
     // fetch("http://localhost:4000/v1/patients")
-    fetch(`https://salty-fortress-39510.herokuapp.com/v1/doctors`) // doctor exercise node
+    fetch(`https://salty-fortress-39510.herokuapp.com/v1/patients`) // doctor exercise node
       .then((response) => response.json())
       .then((result) => setPatients(result));
   };
