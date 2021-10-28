@@ -20,10 +20,10 @@ export default function App(props) {
                 <Link to="/">Homepage</Link>
               </li>
               <li>
-                <Link to="/doctors">Doctors</Link>
+                <Link to="/doctors">Turtle_Species</Link>
               </li>
               <li>
-                <Link to="/patients">Patients</Link>
+                <Link to="/patients">Food_Stock</Link>
               </li>
             </ul>
           </nav>
