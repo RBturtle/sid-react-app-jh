@@ -45,7 +45,7 @@ export default class DoctorsList extends Component {
   render() {
     return (
       <>
-        <h2>Doctors List</h2>
+        <h2>Turtle_Species List</h2>
         <AddDoctor onAddDoctor={(name) => this.handleAddDoctor(name)} />
         {this.renderDoctors()}
       </>

@@ -17,7 +17,7 @@ const PatientsList = () => {
 
   return (
     <>
-      <h2>Patients List</h2>
+      <h2>Food Stock List</h2>
       {patients &&
         patients.map((patient) => (
           <PatientListItem key={patient.id} patient={patient} />
