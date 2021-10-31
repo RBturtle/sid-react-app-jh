@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import TurtlesList from "./components/TurtlesList";
 import FoodsList from "./components/FoodsList";
+import Homepage from "./components/Homepage";
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,7 +18,10 @@ export default function App(props) {
           <nav>
             <ul>
               <li>
-                <Link to="/">Homepage</Link>
+                <Link to="/">Blank</Link>
+              </li>
+              <li>
+                <Link to="/home">Homepage</Link>
               </li>
               <li>
                 <Link to="/turtle_species">Turtle_Species</Link>
@@ -28,6 +32,9 @@ export default function App(props) {
             </ul>
           </nav>
           <Switch>
+            <Route path="/home">
+              <Homepage />
+            </Route>
             <Route path="/turtle_species">
               <TurtlesList />
             </Route>
