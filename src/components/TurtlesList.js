@@ -28,7 +28,7 @@ export default class TurtlesList extends Component {
   handleSearchQuery(searchedName) {
     const lowercaseSearch = searchedName.toLowerCase();
     const filteredTurtlesList = this.state.turtles.filter(
-      (turtle) => turtle.name.includes(lowercaseSearch)
+      (turtle) => turtle.name.toLowerCase().includes(lowercaseSearch)
     );
 
     this.setState({ turtles: filteredTurtlesList});
