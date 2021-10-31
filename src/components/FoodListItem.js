@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const PatientListItem = ({ patient }) => {
-  const [doctorsList, setDoctorsList] = useState(null);
+const FoodListItem = ({ food }) => {
+  const [turtlesList, setTurtlesList] = useState(null);
 
   const GQL_API = `https:obscure-refuge-06548.herokuapp.com/`; // `http://localhost:3030/`; // graphql api
   const GQL_QUERY = `
@@ -14,8 +14,8 @@ const PatientListItem = ({ patient }) => {
       }
     }`;
 
-  const handleLoadDoctors = () => {
-    const variables = { id: patient.id };
+  const handleLoadTurtles = () => {
+    const variables = { id: food.id };
     fetch(GQL_API, {
       method: "POST",
       headers: {
@@ -27,20 +27,20 @@ const PatientListItem = ({ patient }) => {
       }),
     })
       .then((response) => response.json())
-      .then((result) => setDoctorsList(result.data.patient.doctors));
+      .then((result) => setTurtlesList(result.data.patient.doctors));
   };
 
   return (
     <div>
-      <a href="#" onClick={handleLoadDoctors}>
-        {patient.name}
+      <a href="#" onClick={handleLoadTurtles}>
+        {food.name}
       </a>
-      {doctorsList &&
-        doctorsList.map((doctor) => {
-          return <div key={doctor.id}>{doctor.name}</div>;
+      {turtlesList &&
+        turtlesList.map((turtle) => {
+          return <div key={turtle.id}>{turtle.name}</div>;
         })}
     </div>
   );
 };
 
-export default PatientListItem;
+export default FoodListItem;

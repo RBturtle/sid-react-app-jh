@@ -1,41 +1,41 @@
 // import React, { useRef } from "react";
 
-// const AddDoctor = (props) => {
+// const AddTurtle = (props) => {
 //   const doctorNameInputRef = useRef(null);
 
-//   const handleAddDoctor = () => {
+//   const handleAddTurtle = () => {
 //     console.log(doctorNameInputRef.current.value);
 //   };
 
 //   return (
 //     <div>
 //       <input type="text" ref={doctorNameInputRef} />
-//       <button onClick={handleAddDoctor}>Add Doctor</button>
+//       <button onClick={handleAddTurtle}>Add Turtle</button>
 //     </div>
 //   );
 // };
 
-// export default AddDoctor;
+// export default AddTurtle;
 
 import React, { useState } from "react";
 
-const AddDoctor = (props) => {
-  const [doctorName, setDoctorName] = useState("");
+const AddTurtle = (props) => {
+  const [doctorName, setTurtleName] = useState("");
 
   const handleChangeName = (event) => {
-    setDoctorName(event.target.value);
+    setTurtleName(event.target.value);
   };
 
-  const handleAddDoctor = () => {
-    props.onAddDoctor(doctorName);
+  const handleAddTurtle = () => {
+    props.onAddTurtle(doctorName);
   };
 
   return (
     <div>
       <input type="text" value={doctorName} onChange={handleChangeName} />
-      <button onClick={handleAddDoctor}>Add Doctor</button>
+      <button onClick={handleAddTurtle}>Add Turtle</button>
     </div>
   );
 };
 
-export default AddDoctor;
+export default AddTurtle;

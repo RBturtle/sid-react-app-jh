@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
-import DoctorsList from "./components/DoctorsList";
-import PatientsList from "./components/PatientsList";
+import TurtlesList from "./components/TurtlesList";
+import FoodsList from "./components/FoodsList";
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,10 +29,10 @@ export default function App(props) {
           </nav>
           <Switch>
             <Route path="/turtle_species">
-              <DoctorsList />
+              <TurtlesList />
             </Route>
             <Route path="/food_stock">
-              <PatientsList />
+              <FoodsList />
             </Route>
           </Switch>
         </div>

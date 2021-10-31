@@ -1,6 +1,6 @@
 import React from "react";
 
-const DoctorDetails = ({ scientific_name, family_ancestor, interesting_fact, lived_year, edible_food }) => {
+const TurtleDetails = ({ scientific_name, family_ancestor, interesting_fact, lived_year, edible_food }) => {
   const { edible_1, edible_2, edible_3, edible_4 } = edible_food;
 
   return (
@@ -16,4 +16,4 @@ const DoctorDetails = ({ scientific_name, family_ancestor, interesting_fact, liv
   );
 };
 
-export default DoctorDetails;
+export default TurtleDetails;
