@@ -1,15 +1,15 @@
 // import React, { useRef } from "react";
 
 // const AddTurtle = (props) => {
-//   const doctorNameInputRef = useRef(null);
+//   const turtleNameInputRef = useRef(null);
 
 //   const handleAddTurtle = () => {
-//     console.log(doctorNameInputRef.current.value);
+//     console.log(turtleNameInputRef.current.value);
 //   };
 
 //   return (
 //     <div>
-//       <input type="text" ref={doctorNameInputRef} />
+//       <input type="text" ref={turtleNameInputRef} />
 //       <button onClick={handleAddTurtle}>Add Turtle</button>
 //     </div>
 //   );
@@ -20,19 +20,19 @@
 import React, { useState } from "react";
 
 const AddTurtle = (props) => {
-  const [doctorName, setTurtleName] = useState("");
+  const [turtleName, setTurtleName] = useState("");
 
   const handleChangeName = (event) => {
     setTurtleName(event.target.value);
   };
 
   const handleAddTurtle = () => {
-    props.onAddTurtle(doctorName);
+    props.onAddTurtle(turtleName);
   };
 
   return (
     <div>
-      <input type="text" value={doctorName} onChange={handleChangeName} />
+      <input type="text" value={turtleName} onChange={handleChangeName} />
       <button onClick={handleAddTurtle}>Add Turtle</button>
     </div>
   );
