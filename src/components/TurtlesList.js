@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TurtleListItem from "./TurtleListItem";
 import AddTurtle from "./AddTurtle";
+import SearchTurtle from "./SearchTurtle";
 
 export default class TurtlesList extends Component {
   constructor(props) {
@@ -22,6 +23,15 @@ export default class TurtlesList extends Component {
     );
 
     this.setState({ turtles: newTurtlesList });
+  }
+
+  handleSearchQuery(searchedName) {
+    const lowercaseSearch = searchedName.toLowerCase();
+    const filteredTurtlesList = this.state.turtles.filter(
+      (turtle) => turtle.name.includes(lowercaseSearch)
+    );
+
+    this.setState({ turtles: filteredTurtlesList});
   }
 
   renderTurtles() {
@@ -47,6 +57,7 @@ export default class TurtlesList extends Component {
       <>
         <h2>Turtle_Species List</h2>
         <AddTurtle onAddTurtle={(name) => this.handleAddTurtle(name)} />
+        <SearchTurtle onSearchQuery={(searchedName) => this.handleSearchQuery(searchedName)} />
         {this.renderTurtles()}
       </>
     );
