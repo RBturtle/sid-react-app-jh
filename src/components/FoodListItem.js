@@ -3,8 +3,7 @@ import React, { useState } from "react";
 const FoodListItem = ({ food }) => {
   const [turtlesList, setTurtlesList] = useState(null);
 
-  const GQL_API = `https://shocking-zombie-54580.herokuapp.com/`
-        // `https:obscure-refuge-06548.herokuapp.com/`; // `http://localhost:3030/`; // graphql api 
+  const GQL_API = `https:obscure-refuge-06548.herokuapp.com/`; // `http://localhost:3030/`; // graphql api 
   const GQL_QUERY = `
     query($id: ID!){
       food(id: $id){
@@ -31,7 +30,7 @@ const FoodListItem = ({ food }) => {
       }),
     })
       .then((response) => response.json())
-      .then((result) => setTurtlesList(result.data.food.turtles));
+      .then((result) => setTurtlesList(result.data.patient.doctors));
   };
 
   return (
