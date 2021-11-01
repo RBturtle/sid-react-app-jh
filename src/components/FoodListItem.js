@@ -3,13 +3,17 @@ import React, { useState } from "react";
 const FoodListItem = ({ food }) => {
   const [turtlesList, setTurtlesList] = useState(null);
 
-  const GQL_API = `https:obscure-refuge-06548.herokuapp.com/`; // `http://localhost:3030/`; // graphql api
+  const GQL_API = `https://shocking-zombie-54580.herokuapp.com/`
+        // `https:obscure-refuge-06548.herokuapp.com/`; // `http://localhost:3030/`; // graphql api 
   const GQL_QUERY = `
     query($id: ID!){
-      patient(id: $id){
-        doctors{
-          id
-          name
+      food(id: $id){
+        turtles{
+          ScientificName,
+          EnglishName,
+          Family,
+          LivedYears,
+          InterestingFact
         }
       }
     }`;
