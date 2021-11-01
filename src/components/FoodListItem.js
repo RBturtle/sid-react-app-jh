@@ -31,7 +31,7 @@ const FoodListItem = ({ food }) => {
       }),
     })
       .then((response) => response.json())
-      .then((result) => setTurtlesList(result.data.patient.doctors));
+      .then((result) => setTurtlesList(result.data.food.turtles));
   };
 
   return (
