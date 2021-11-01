@@ -6,13 +6,10 @@ const FoodListItem = ({ food }) => {
   const GQL_API = `https:obscure-refuge-06548.herokuapp.com/`; // `http://localhost:3030/`; // graphql api 
   const GQL_QUERY = `
     query($id: ID!){
-      food(id: $id){
-        turtles{
-          ScientificName,
-          EnglishName,
-          Family,
-          LivedYears,
-          InterestingFact
+      patient(id: $id){
+        doctors{
+          id
+          name
         }
       }
     }`;
